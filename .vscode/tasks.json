@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.2.1",
+    "command": "dotnet",
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "build",
+            "args": [ 
+                "${workspaceRoot}/J3DI.sln"
+            ],
+            "isBuildCommand": true,
+            "showOutput": "always",
+            "problemMatcher": "$msCompile",
+            "echoCommand": true
+        },
+        {
+            "taskName": "test",
+            "args": [
+                "${workspaceRoot}/Test.J3DI.Domain/Test.J3DI.Domain.csproj"
+            ],
+            "isBuildCommand": false,
+            "isTestCommand": true,
+            "showOutput": "always",
+            "problemMatcher": "$msCompile",
+            "echoCommand": true
+        }
+
+    ]
+}

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>2.2.0</VersionPrefix>
+    <!-- -->
+    <Description>Testing support for J3DI.</Description>
+    <Copyright>AltaModa Technologies 2017</Copyright>
+    <Company>AltaModa Technologies</Company>
+    <Authors>jburnett</Authors>
+    <AssemblyName>Test.J3DI.Common</AssemblyName>
+    <!-- -->
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+      <TargetFrameworks>netstandard1.3;netstandard2.0;net452;</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+      <TargetFrameworks>netstandard1.3;netstandard2.0;</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\J3DI.Domain\J3DI.Domain.csproj" />
+    <ProjectReference Include="..\J3DI.Infrastructure.EntityFactoryFx\J3DI.Infrastructure.EntityFactoryFx.csproj" />
+    <ProjectReference Include="..\J3DI.Infrastructure.RepositoryFx\J3DI.Infrastructure.RepositoryFx.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AMT.LINQExtensions" Version="*" />
+    <PackageReference Include="FluentAssertions" Version="4.*" />
+  </ItemGroup>
+
+</Project>
