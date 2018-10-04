@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="AMT.LINQExtensions" Version="*" />
-    <PackageReference Include="FluentAssertions" Version="4.*" />
+    <PackageReference Include="FluentAssertions" Version="5.*" />
   </ItemGroup>
 
 </Project>

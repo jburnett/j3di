@@ -72,7 +72,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
 
             // Verify entity was not added to repository
             Action act = () => repo.FindById("7466");
-            act.ShouldThrow<System.Collections.Generic.KeyNotFoundException>();            
+            act.Should().Throw<System.Collections.Generic.KeyNotFoundException>();            
         }
 
 
@@ -112,7 +112,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
 
             // Verify entity was not added to repository
             Action act = () => repo.FindById(testEntity.Id);
-            act.ShouldThrow<System.Collections.Generic.KeyNotFoundException>();            
+            act.Should().Throw<System.Collections.Generic.KeyNotFoundException>();            
         }
 
 
@@ -154,7 +154,8 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             Assert.False(removedReceived);
 
             var e = repo.FindById("7466");
-            Assert.True(e.Id.Equals("7466"));
+//            Assert.True(e.Id.Equals("7466"));
+            Assert.Equal("7466", e.Id);
         }
 
 
@@ -185,7 +186,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
 
             // Verify entity was not added to repository
             Action act = () => repo.FindById(testEntity.Id);
-            act.ShouldThrow<System.Collections.Generic.KeyNotFoundException>();            
+            act.Should().Throw<System.Collections.Generic.KeyNotFoundException>();            
         }
 
 

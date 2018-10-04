@@ -55,8 +55,8 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
 
             // Verify the expected exception, and that message includes entity id
 // TODO: excp messages differ b/t net452 and netcoreapp1.0. Intentional?
-//            act.ShouldThrow<System.ArgumentException>().Where(e => e.Message.Contains(entityId));
-            act.ShouldThrow<System.ArgumentException>();
+//            act.Should().Throw<System.ArgumentException>().Where(e => e.Message.Contains(entityId));
+            act.Should().Throw<System.ArgumentException>();
         }
 
         #endregion IEntityRepository.Add tests
@@ -73,7 +73,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             };
 
             // Verify the correct exception thrown during the action
-            act.ShouldThrow<System.Collections.Generic.KeyNotFoundException>();
+            act.Should().Throw<System.Collections.Generic.KeyNotFoundException>();
         }
 
 
@@ -86,7 +86,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             };
 
             // Verify the correct exception thrown during the action
-            act.ShouldThrow<System.Collections.Generic.KeyNotFoundException>();
+            act.Should().Throw<System.Collections.Generic.KeyNotFoundException>();
         }
 
 
@@ -132,7 +132,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
                 _repo.FindById(entityId);
             };
 
-            act.ShouldThrow<System.Collections.Generic.KeyNotFoundException>();
+            act.Should().Throw<System.Collections.Generic.KeyNotFoundException>();
         }
 
 
@@ -152,7 +152,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
                 _repo.FindById(entityId);
             };
 
-            act.ShouldThrow< System.Collections.Generic.KeyNotFoundException >();
+            act.Should().Throw< System.Collections.Generic.KeyNotFoundException >();
         }
 
         [Fact]
@@ -166,7 +166,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             };
 
             // Verify the correct exception thrown during the action
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         #endregion IEntityRepository.Remove tests

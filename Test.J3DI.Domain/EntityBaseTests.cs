@@ -51,16 +51,16 @@ namespace Test.J3DI.Domain
 		{
 			// Verify creating entity with null string id throws appro excp
 			Action ctor_with_null = () => new EntityByString1(null);
-			ctor_with_null.ShouldThrow<ArgumentNullException>(because: "id is null");
+			ctor_with_null.Should().Throw<ArgumentNullException>(because: "id is null");
 
 
 			// Verify creating entity with nullable id throws appro excp.
 			//	NOTE: don't use nullable in production code. this one is just for testing.
 			ctor_with_null = () => new EntityByNullableInt(null);
-			ctor_with_null.ShouldThrow<ArgumentNullException>(because: "id is null");
+			ctor_with_null.Should().Throw<ArgumentNullException>(because: "id is null");
 
 			ctor_with_null = () => new EntityByNullableGuid(null);
-			ctor_with_null.ShouldThrow<ArgumentNullException>(because: "id is null");
+			ctor_with_null.Should().Throw<ArgumentNullException>(because: "id is null");
 		}
 
 		#endregion Ctor tests
