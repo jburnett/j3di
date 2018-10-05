@@ -154,7 +154,6 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             Assert.False(removedReceived);
 
             var e = repo.FindById("7466");
-//            Assert.True(e.Id.Equals("7466"));
             Assert.Equal("7466", e.Id);
         }
 
