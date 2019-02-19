@@ -71,7 +71,7 @@ namespace Test.J3DI.Infrastructure.EntityFactoryFx {
             Exception ex = Assert.Throws<ArgumentException>(
                 () => EntityFactoryManager.Register<EntityByString1, string>(factory, false)
             );
-            Assert.True(ex.Message.Contains("An item with the same key has already been added."));            
+            Assert.Contains("An item with the same key has already been added.", ex.Message);
         }
 
 
@@ -81,8 +81,8 @@ namespace Test.J3DI.Infrastructure.EntityFactoryFx {
             Exception ex = Assert.Throws<ArgumentNullException>(
                 () => EntityFactoryManager.Register<EntityByString1, string>(null)
             );
-            Assert.True(ex.Message.Contains("Value cannot be null"));            
-            Assert.True(ex.Message.Contains("entityFactory"));            
+            Assert.Contains("Value cannot be null", ex.Message);            
+            Assert.Contains("entityFactory", ex.Message);
         }
     }
 

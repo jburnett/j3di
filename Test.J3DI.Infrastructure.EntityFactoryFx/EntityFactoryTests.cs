@@ -29,7 +29,7 @@ namespace Test.J3DI.Infrastructure.EntityFactoryFx {
             Exception ex = Assert.Throws<ArgumentNullException>(
                 () => e1 = (EntityByString1)(new EntityByString1Factory()).BuildEntity(null)
             );
-            Assert.True(ex.Message.Contains("record"));
+            Assert.Contains("record", ex.Message);
         }
 
 
