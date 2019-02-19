@@ -14,10 +14,10 @@
 
   <!-- NuGet package attributes  -->
   <PropertyGroup>
-    <PackageTags>DDD NETCore</PackageTags>
-    <PackageReleaseNotes>v2.2 adds support for updating entities.</PackageReleaseNotes>
-    <PackageProjectUrl>https://github.com/jburnett/J3DI</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>
+    <PackageReleaseNotes>v2.2.1 improves maintainability and fixes minor warning.</PackageReleaseNotes>
+    <PackageProjectUrl>https://bitbucket.org/jburnett/J3DI</PackageProjectUrl>
+    <PackageLicense>http://www.apache.org/licenses/LICENSE-2.0</PackageLicense>
   </PropertyGroup>
 
 </Project>
