@@ -1,32 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="../common.test.props" />
+
+
   <PropertyGroup>
-    <VersionPrefix>2.2.0</VersionPrefix>
-    <!-- -->
     <AssemblyName>Test.J3DI.Infrastructure.EntityFactoryFx</AssemblyName>
-    <!-- -->
-    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-      <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netcoreapp2.1;net452;net462;net472</TargetFrameworks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-      <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
-  </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\J3DI.Domain\J3DI.Domain.csproj" />
     <ProjectReference Include="..\J3DI.Infrastructure.EntityFactoryFx\J3DI.Infrastructure.EntityFactoryFx.csproj" />
     <ProjectReference Include="..\Test.J3DI.Domain\Test.J3DI.Domain.csproj" />
     <ProjectReference Include="..\Test.J3DI.Common\Test.J3DI.Common.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.*" />
-    <PackageReference Include="xunit" Version="2.*" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.*" />
-    <PackageReference Include="FluentAssertions" Version="5.*" />
   </ItemGroup>
 
 </Project>

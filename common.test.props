@@ -1,0 +1,33 @@
+<Project>
+
+  <Import Project="./common.props" />
+
+
+  <!-- Target frameworks  -->
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+      <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netcoreapp2.1;net452;net462;net472</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+      <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
+  </PropertyGroup>
+
+
+  <!-- Packages for test support  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.*" />
+    <PackageReference Include="xunit" Version="2.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.*" />
+    <PackageReference Include="FluentAssertions" Version="5.*" />
+  </ItemGroup>
+
+
+  <!-- Assembly and NuGet package attributes  -->
+  <PropertyGroup>
+    <!-- Associate test assemblies with J3DI product -->
+    <Product>J3DI</Product>
+    
+    <!-- Exclude assemblies from packing for NuGet -->
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+</Project>

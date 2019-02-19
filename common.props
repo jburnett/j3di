@@ -1,0 +1,20 @@
+<Project>
+
+    <!-- Company, copyright -->
+    <PropertyGroup>
+        <Copyright>AltaModa Technologies 2019</Copyright>
+        <Company>AltaModa Technologies</Company>
+        <Authors>@jburnett</Authors>
+    </PropertyGroup>
+
+
+    <!-- Assembly version & attribute controls -->
+    <PropertyGroup>
+        <VersionPrefix>2.2.1</VersionPrefix>
+
+        <GenerateAssemblyConfigurationAttribute>true</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>true</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
+    </PropertyGroup>
+
+</Project>

@@ -1,33 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="../common.prod.props" />
+
   <PropertyGroup>
-    <VersionPrefix>2.2.0</VersionPrefix>
-    <!-- -->
+    <!-- Assembly properties -->
     <Product>J3DI</Product>
     <Description>J3DI is a Domain-Driven Design framework for .NET Core and is intended to be minimalistic &amp; cross-platform.  This package, J3DI.Domain, is the foundation and may be used stand-alone.</Description>
-    <Copyright>AltaModa Technologies 2017</Copyright>
-    <Company>AltaModa Technologies</Company>
-    <Authors>jburnett</Authors>
     <AssemblyName>J3DI.Infrastructure.EntityFactoryFx</AssemblyName>
     <AssemblyTitle>J3DI Entity Factory Framework</AssemblyTitle>
-    <!-- -->
-    <GenerateAssemblyConfigurationAttribute>true</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>true</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
-    <!-- -->
+    <!-- NuGet package properties -->
     <PackageId>J3DI.Infrastructure.EntityFactoryFx</PackageId>
-    <PackageTags>DDD NETCore</PackageTags>
-    <PackageReleaseNotes>v2.2 adds support for updating entities.</PackageReleaseNotes>
-    <PackageProjectUrl>https://github.com/jburnett/J3DI</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-      <TargetFrameworks>netstandard1.3;netstandard2.0;net452;net462;net472</TargetFrameworks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-      <TargetFrameworks>netstandard1.3;netstandard2.0;</TargetFrameworks>
-  </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\J3DI.Domain\J3DI.Domain.csproj" />
