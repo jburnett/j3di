@@ -14,6 +14,6 @@ pipelines:
           - export SOLUTION_NAME=J3DI.sln
           - dotnet restore
           - dotnet build $SOLUTION_NAME
-          - dotnet test Test.J3DI.Domain
-          - dotnet test Test.J3DI.EntityFactoryFx
-          - dotnet test Test.J3DI.RepositoryFx
+#          - dotnet test --logger:junit;LogFilePath=./test-reports/results.xml Test.J3DI.Domain
+          - dotnet test --logger:junit;LogFilePath=./test-reports/results.xml Test.J3DI.EntityFactoryFx
+#          - dotnet test Test.J3DI.RepositoryFx
