@@ -5,10 +5,10 @@
 
   <!-- Target frameworks  -->
   <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-      <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netcoreapp2.1;net452;net462;net472</TargetFrameworks>
+      <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;net462;net472</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-      <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
+      <TargetFrameworks>netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
   </PropertyGroup>
 
 
