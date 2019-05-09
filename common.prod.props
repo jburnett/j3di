@@ -5,17 +5,17 @@
 
   <!-- Target frameworks  -->
   <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-      <TargetFrameworks>netstandard1.3;netstandard2.0;net452;net462;net472</TargetFrameworks>
+      <TargetFrameworks>netstandard2.0;net462;net472</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-      <TargetFrameworks>netstandard1.3;netstandard2.0;</TargetFrameworks>
+      <TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
 
   <!-- NuGet package attributes  -->
   <PropertyGroup>
     <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>
-    <PackageReleaseNotes>v2.2.2 improves maintainability and fixes minor warning.</PackageReleaseNotes>
+    <PackageReleaseNotes>v2.3.0 removes support for Net Standard 1.x ahead of July EOL.</PackageReleaseNotes>
     <PackageProjectUrl>https://bitbucket.org/jburnett/J3DI</PackageProjectUrl>
     <PackageLicense>http://www.apache.org/licenses/LICENSE-2.0</PackageLicense>
   </PropertyGroup>
