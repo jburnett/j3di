@@ -15,9 +15,9 @@
   <!-- NuGet package attributes  -->
   <PropertyGroup>
     <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>
-    <PackageReleaseNotes>v2.3.0 removes support for Net Standard 1.x ahead of July EOL.</PackageReleaseNotes>
+    <PackageReleaseNotes>v2.3.1 use PackageLicenseExpression for NuGet changes.</PackageReleaseNotes>
     <PackageProjectUrl>https://bitbucket.org/jburnett/J3DI</PackageProjectUrl>
-    <PackageLicense>http://www.apache.org/licenses/LICENSE-2.0</PackageLicense>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>

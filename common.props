@@ -10,7 +10,7 @@
 
     <!-- Assembly version & attribute controls -->
     <PropertyGroup>
-        <VersionPrefix>2.3.0</VersionPrefix>
+        <VersionPrefix>2.3.1</VersionPrefix>
 
         <GenerateAssemblyConfigurationAttribute>true</GenerateAssemblyConfigurationAttribute>
         <GenerateAssemblyCompanyAttribute>true</GenerateAssemblyCompanyAttribute>
