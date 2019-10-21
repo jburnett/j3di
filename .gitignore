@@ -40,6 +40,9 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
+# Coverlet output
+coverage.json
+
 # DNX
 project.lock.json
 artifacts/
