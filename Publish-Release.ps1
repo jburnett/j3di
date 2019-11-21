@@ -15,5 +15,5 @@ Write-Verbose "Publish projects"
 $projPaths | %{
     write-host ""   # separator
     $pkg = gci $_/bin/Release *.nupkg
-    dotnet nuget push -k $apiKey $pkg.FullName -s https://www.nuget.org/api/v2/package
+    dotnet nuget push -k $apiKey $pkg.FullName -s https://api.nuget.org/v3/index.json
 }
