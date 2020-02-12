@@ -5,14 +5,14 @@
 
   <!-- Target frameworks  -->
   <PropertyGroup>
-      <TargetFrameworks>netstandard2.1</TargetFrameworks>
+      <TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
 
   <!-- NuGet package attributes  -->
   <PropertyGroup>
     <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>
-    <PackageReleaseNotes>v3.0.0 supports .NET Core 3.0 (.NET Fx dropped).</PackageReleaseNotes>
+    <PackageReleaseNotes>LTS for NetStandard 2.0 with .NET Core 2.1 &amp; 3.1.</PackageReleaseNotes>
     <PackageProjectUrl>https://bitbucket.org/jburnett/J3DI</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
