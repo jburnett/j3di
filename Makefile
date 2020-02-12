@@ -1,15 +1,17 @@
-all: clean test 
+all: test 
 
 
 test: build
-	dotnet test ./test.j3di.domain
-	dotnet test ./test.j3di.infrastructure.entityfactoryfx
-	dotnet test ./test.j3di.infrastructure.repositoryfx
+	dotnet test ./Test.J3DI.Domain
+	dotnet test ./Test.J3DI.Infrastructure.EntityFactoryFx
+	dotnet test ./Test.J3DI.Infrastructure.RepositoryFx
+
 
 cover: build
-	dotnet test /p:CollectCoverage=true /p:Include="[j3di*]*" /p:Exclude="[test.j3di*]*"  ./test.j3di.domain
-	dotnet test /p:CollectCoverage=true /p:Include="[j3di*]*" /p:Exclude="[test.j3di*]*"  ./test.j3di.infrastructure.entityfactoryfx
-	dotnet test /p:CollectCoverage=true /p:Include="[j3di*]*" /p:Exclude="[test.j3di*]*"  ./test.j3di.infrastructure.repositoryfx
+	dotnet test /p:CollectCoverage=true /p:Include="[J3DI*]*" /p:Exclude="[Test.J3DI*]*"  ./Test.J3DI.Domain
+	dotnet test /p:CollectCoverage=true /p:Include="[J3DI*]*" /p:Exclude="[Test.J3DI*]*"  ./Test.J3DI.Infrastructure.EntityfactoryFx
+	dotnet test /p:CollectCoverage=true /p:Include="[J3DI*]*" /p:Exclude="[Test.J3DI*]*"  ./Test.J3DI.Infrastructure.RepositoryFx
+
 
 build: 
 	dotnet build
