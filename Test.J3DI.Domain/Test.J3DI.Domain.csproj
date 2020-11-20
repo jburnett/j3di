@@ -13,7 +13,6 @@
     <ProjectReference Include="..\Test.J3DI.Common\Test.J3DI.Common.csproj" />
   </ItemGroup>
 
-
   <ItemGroup>
     <PackageReference Include="coverlet.msbuild" Version="2.*">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

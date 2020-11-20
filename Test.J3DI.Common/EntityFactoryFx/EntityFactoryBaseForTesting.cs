@@ -1,5 +1,6 @@
 using J3DI.Domain;
 using J3DI.Infrastructure.EntityFactoryFx;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using Test.J3DI.Common;
@@ -47,7 +48,10 @@ namespace Test.J3DI.Infrastructure.EntityFactoryFx {
             ThrowExceptionOnNullDataReader = true;
         }
 
-
         #endregion Special additions for testing purposes only
+
+
+        protected ILogger _logger;
+ 
     }
 }

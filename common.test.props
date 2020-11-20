@@ -13,10 +13,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.*" />
     <PackageReference Include="xunit" Version="2.*" />
+    <PackageReference Include="xunit.abstractions" Version="2.*" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.*" />
     <PackageReference Include="FluentAssertions" Version="5.*" />
+    <PackageReference Include="Moq" Version="*" />
+    <!-- <PackageReference Include="MockLoggerExtensions" Version="*" /> -->
   </ItemGroup>
-
 
   <!-- Assembly and NuGet package attributes  -->
   <PropertyGroup>

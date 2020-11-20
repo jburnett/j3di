@@ -2,7 +2,7 @@
 
     <!-- Company, copyright -->
     <PropertyGroup>
-        <Copyright>AltaModa Technologies 2019</Copyright>
+        <Copyright>AltaModa Technologies 2020</Copyright>
         <Company>AltaModa Technologies</Company>
         <Authors>@jburnett</Authors>
     </PropertyGroup>
@@ -16,5 +16,10 @@
         <GenerateAssemblyCompanyAttribute>true</GenerateAssemblyCompanyAttribute>
         <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
     </PropertyGroup>
+
+     <!-- Packages used by all  -->
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.*" />
+    </ItemGroup>
 
 </Project>
