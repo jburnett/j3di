@@ -21,7 +21,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal Test.J3DI.Domain/Test.J3DI.Domain.csproj && \
-          dotnet test --no-restore --verbosity normal Test.J3DI.Infrastructure.EntityFactoryFx/Test.J3DI.Infrastructure.EntityFactoryFx.csproj && \
-          dotnet test --no-restore --verbosity normal Test.J3DI.Infrastructure.RepositoryFx/Test.J3DI.Infrastructure.RepositoryFx.csproj
+    - name: Test.J3DI.Domain
+      run: dotnet test --no-restore --verbosity normal ./Test.J3DI.Domain/Test.J3DI.Domain.csproj
+    - name: Test.J3DI.Infrastructure.EntityFactoryFx
+      run: dotnet test --no-restore --verbosity normal ./Test.J3DI.Infrastructure.EntityFactoryFx/Test.J3DI.Infrastructure.EntityFactoryFx.csproj
+    - name: Test.J3DI.Infrastructure.RepositoryFx
+      run: dotnet test --no-restore --verbosity normal ./Test.J3DI.Infrastructure.RepositoryFx/Test.J3DI.Infrastructure.RepositoryFx.csproj
