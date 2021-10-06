@@ -12,7 +12,7 @@
   <!-- NuGet package attributes  -->
   <PropertyGroup>
     <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>
-    <PackageReleaseNotes>LTS for .NET 5.0 &amp; NetStandard 2.1 with .NET Core 3.1.</PackageReleaseNotes>
+    <PackageReleaseNotes>LTS for .NET Core 3.1 &amp; .NET 5.0.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/jburnett/J3DI</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
