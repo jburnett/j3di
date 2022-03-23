@@ -5,14 +5,14 @@
 
   <!-- Target frameworks  -->
   <PropertyGroup>
-      <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+      <TargetFrameworks>net6.0</TargetFrameworks>
   </PropertyGroup>
 
 
   <!-- NuGet package attributes  -->
   <PropertyGroup>
     <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>
-    <PackageReleaseNotes>LTS for .NET 5.0, &amp; .NET 6.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>LTS for .NET 6.0.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/jburnett/J3DI</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
