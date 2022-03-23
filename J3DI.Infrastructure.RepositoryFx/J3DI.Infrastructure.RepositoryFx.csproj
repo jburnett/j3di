@@ -19,11 +19,5 @@
     <ProjectReference Include="..\J3DI.Infrastructure.EntityFactoryFx\J3DI.Infrastructure.EntityFactoryFx.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Data.Common" Version="4.*" />
-    <!-- Refs required for netstandard1.x -->
-    <PackageReference Include="System.ComponentModel" Version="4.3" />
-  </ItemGroup>
-
 
 </Project>
