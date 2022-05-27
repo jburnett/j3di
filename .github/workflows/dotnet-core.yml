@@ -8,6 +8,9 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        build-config: [ Debug, Release ]
 
     runs-on: ubuntu-latest
 
@@ -17,19 +20,19 @@ jobs:
     - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 6.0
+        dotnet-version: 6.0.*
 
     - name: Install dependencies
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration ${{ matrix.build-config }}
 
     - name: Test.J3DI.Domain
-      run: dotnet test --no-restore --verbosity normal ./Test.J3DI.Domain/Test.J3DI.Domain.csproj
+      run: dotnet test --no-restore --configuration ${{ matrix.build-config }} --verbosity normal ./Test.J3DI.Domain/Test.J3DI.Domain.csproj
 
     - name: Test.J3DI.Infrastructure.EntityFactoryFx
-      run: dotnet test --no-restore --verbosity normal ./Test.J3DI.Infrastructure.EntityFactoryFx/Test.J3DI.Infrastructure.EntityFactoryFx.csproj
+      run: dotnet test --no-restore --configuration ${{ matrix.build-config }} --verbosity normal ./Test.J3DI.Infrastructure.EntityFactoryFx/Test.J3DI.Infrastructure.EntityFactoryFx.csproj
 
     - name: Test.J3DI.Infrastructure.RepositoryFx
-      run: dotnet test --no-restore --verbosity normal ./Test.J3DI.Infrastructure.RepositoryFx/Test.J3DI.Infrastructure.RepositoryFx.csproj
+      run: dotnet test --no-restore --configuration ${{ matrix.build-config }} --verbosity normal ./Test.J3DI.Infrastructure.RepositoryFx/Test.J3DI.Infrastructure.RepositoryFx.csproj
