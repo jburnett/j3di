@@ -3,12 +3,6 @@
   <Import Project="./common.props" />
 
 
-  <!-- Target frameworks  -->
-  <PropertyGroup>
-      <TargetFrameworks>net6.0</TargetFrameworks>
-  </PropertyGroup>
-
-
   <!-- NuGet package attributes  -->
   <PropertyGroup>
     <PackageTags>Domain-Driven-Design DDD DotNet .NET DotNetCore</PackageTags>

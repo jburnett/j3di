@@ -42,6 +42,7 @@ dlldata.c
 
 # Coverlet output
 coverage.json
+coverage.*.json
 
 # DNX
 project.lock.json
