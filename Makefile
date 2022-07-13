@@ -19,3 +19,8 @@ build:
 
 clean:
 	dotnet clean
+
+
+clean-all: clean
+	@echo "### Remove all NuPkg files"
+	find . -iname "*.nupkg" -exec rm {} \;
