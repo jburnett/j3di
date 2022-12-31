@@ -24,3 +24,6 @@ clean:
 clean-all: clean
 	@echo "### Remove all NuPkg files"
 	find . -iname "*.nupkg" -exec rm {} \;
+	@echo "### Remove bin and obj dirs"
+	find . -type d -name "bin" -exec rm -r {} \;
+	find . -type d -name "obj" -exec rm -r {} \;
