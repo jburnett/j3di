@@ -8,9 +8,16 @@ test: build
 
 
 cover: build
-	dotnet test /p:CollectCoverage=true /p:Include="[J3DI*]*" /p:Exclude="[Test.J3DI*]*"  ./Test.J3DI.Domain
-	dotnet test /p:CollectCoverage=true /p:Include="[J3DI*]*" /p:Exclude="[Test.J3DI*]*"  ./Test.J3DI.Infrastructure.EntityfactoryFx
-	dotnet test /p:CollectCoverage=true /p:Include="[J3DI*]*" /p:Exclude="[Test.J3DI*]*"  ./Test.J3DI.Infrastructure.RepositoryFx
+	dotnet test --no-build /p:CollectCoverage=true ./Test.J3DI.Domain/Test.J3DI.Domain.csproj
+	dotnet test --no-build /p:CollectCoverage=true ./Test.J3DI.Infrastructure.EntityfactoryFx/Test.J3DI.Infrastructure.EntityfactoryFx.csproj
+	dotnet test --no-build /p:CollectCoverage=true ./Test.J3DI.Infrastructure.RepositoryFx/Test.J3DI.Infrastructure.RepositoryFx.csproj
+
+cover-report:
+	reportgenerator \
+		-targetdir:coveragereport \
+		"-reports:./Test.J3DI.Domain/coverage.net6.0.json"
+		
+#		./Test.J3DI.Domain/coverage.net6.0.json;./Test.J3DI.Common/coverage.net6.0.json;./Test.J3DI.Infrastructure.RepositoryFx/coverage.net6.0.json;./Test.J3DI.Infrastructure.EntityFactoryFx/coverage.net6.0.json
 
 
 build: 

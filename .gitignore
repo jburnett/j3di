@@ -46,6 +46,8 @@ coverage.*.json
 coverage.*.info
 lcov.*.info
 
+# ReportGenerator output
+[Cc]overage[Rr]eport/*
 
 # DNX
 project.lock.json
