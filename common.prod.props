@@ -9,6 +9,12 @@
     <PackageReleaseNotes>LTS for .NET 6.0.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/jburnett/J3DI</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <!-- A readme in packages is required for pushing to NuGet -->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
