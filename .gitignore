@@ -42,6 +42,12 @@ dlldata.c
 
 # Coverlet output
 coverage.json
+coverage.*.json
+coverage.*.info
+lcov.*.info
+
+# ReportGenerator output
+[Cc]overage[Rr]eport/*
 
 # DNX
 project.lock.json
@@ -253,3 +259,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# MacOS
+**/.DS_Store

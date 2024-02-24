@@ -1,16 +1,14 @@
 using FluentAssertions;
-using J3DI.Domain;
-using J3DI.Infrastructure.EntityFactoryFx;
 using J3DI.Infrastructure.RepositoryFx;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Test.J3DI.Common;
-using Test.J3DI.Domain;
-using Test.J3DI.Infrastructure.EntityFactoryFx;
 using Xunit;
 
 
 namespace Test.J3DI.Infrastructure.RepositoryFx {
 
+	[ExcludeFromCodeCoverage]
     public class IEntityRepositoryTests {
 
         [Fact]
@@ -19,7 +17,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool addingReceived = false;
             bool addedReceived = false;
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            var repo = new EntityByString1Repository();
 
             repo.AddingEntity += (o, cea) => {
                 Assert.NotNull(o);
@@ -47,7 +45,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool addingReceived = false;
             bool addedReceived = false;
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            IEntityRepository<EntityByString1, string>  repo = new EntityByString1Repository();
 
             repo.AddingEntity += (o, cea) => {
                 Assert.NotNull(o);
@@ -84,7 +82,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool removedReceived = false;
             var testEntity = new EntityByString1("7466");
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            var repo = new EntityByString1Repository();
 
             repo.AddedEntity += (o) => {
                 Assert.NotNull(o);
@@ -124,7 +122,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool removedReceived = false;
             var testEntity = new EntityByString1("7466");
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            var repo = new EntityByString1Repository();
 
             repo.AddedEntity += (o) => {
                 Assert.NotNull(o);
@@ -165,7 +163,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool removedReceived = false;
             var testEntity = new EntityByString1("does_not_exist");
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            var repo = new EntityByString1Repository();
 
             repo.RemovingEntity += (o, cea) => {
                 Assert.NotNull(o);
@@ -200,7 +198,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool UpdatedReceived = false;
             var testEntity = new EntityByString1("7466");
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            var repo = new EntityByString1Repository();
             repo.Add(testEntity);
 
             repo.AddingEntity += (o, cea) => {
@@ -259,7 +257,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx {
             bool UpdatedReceived = false;
             var testEntity = new EntityByString1("7466");
 
-            var repo = new RAMBasedEntityRepository<EntityByString1, string>();
+            var repo = new EntityByString1Repository();
             repo.Add(testEntity);
 
             repo.AddingEntity += (o, cea) => {

@@ -1,8 +1,6 @@
 using FluentAssertions;
-using J3DI.Domain;
 using System;
-using System.Linq;
-using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Test.J3DI.Common;
 using Xunit;
 
@@ -10,6 +8,7 @@ using Xunit;
 namespace Test.J3DI.Domain
 {
 
+	[ExcludeFromCodeCoverage]
     public class ValueObjectBaseTests
     {
 
