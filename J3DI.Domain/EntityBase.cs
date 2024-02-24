@@ -46,6 +46,7 @@ namespace J3DI.Domain
 				return false;
 			}
 
+			// Invokes the operator override
 			return this == (obj as EntityBase<TEntityId>);
 		}
 
@@ -87,6 +88,10 @@ namespace J3DI.Domain
 		}
 
 
+		/*
+			TODO: REVIEW: Entity equality is based on Id, but should hash code? Using Id for hash code
+			results in different entities (e.g., int Ids) having the same hash code.
+		*/
 		public override int GetHashCode()
 		{
 			return this.Id.GetHashCode();

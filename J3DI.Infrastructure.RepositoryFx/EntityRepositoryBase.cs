@@ -1,18 +1,16 @@
 using J3DI.Domain;
-using J3DI.Infrastructure.RepositoryFx;
-using System.Collections.Generic;
 using System.ComponentModel;
 
 
-namespace Test.J3DI.Infrastructure.RepositoryFx
+namespace J3DI.Infrastructure.RepositoryFx
 {
-    // TODO: REVIEW: should this class be abstract?
 
-    public class RAMBasedEntityRepository<TEntity, TEntityId> : IEntityRepository< TEntity, TEntityId > 
+    public abstract class EntityRepositoryBase<TEntity, TEntityId> : IEntityRepository<TEntity, TEntityId> 
         where TEntity : EntityBase<TEntityId>
     {
 
         #region IEntityRepository matching methods
+        // IEntityRepository invocations are mapped to the abstract methods
 
         EntityBase<TEntityId> IEntityRepository<TEntity, TEntityId>.FindById(TEntityId entityId)
         {
@@ -37,51 +35,15 @@ namespace Test.J3DI.Infrastructure.RepositoryFx
         #endregion IEntityRepository matching methods
         
 
-
         #region IEntityRepository impl
 
-        public virtual TEntity FindById(TEntityId entityId)
-        {
-            return _repository[entityId];
-        }
+        public abstract TEntity FindById(TEntityId entityId);
 
+        public abstract void Add(TEntity entity);
 
-        public virtual void Add(TEntity entity)
-        {
-            if (OnAddingEntity(entity).Cancel == false)
-            {
-                _repository.Add(entity.Id, entity);
-                OnAddedEntity(entity);
-            }
-        }
+        public abstract void Remove(TEntity entity);
 
-
-        public virtual void Remove(TEntity entity)
-        {
-            if(OnRemovingEntity(entity).Cancel == false)
-            {
-                if (_repository.Remove(entity.Id))
-                {
-                    OnRemovedEntity(entity);
-                }
-            }
-        }
-
-
-        public virtual void Update(TEntity entity)
-        {
-            // Ensure previous exists
-            if (_repository.ContainsKey(entity.Id))
-            {
-                if(OnUpdatingEntity(entity).Cancel == false)
-                {
-                    // Replace the previous 
-                    _repository.Remove(entity.Id);
-                    _repository.Add(entity.Id, entity);
-                    OnUpdatedEntity(entity);
-                }
-            }
-        }
+        public abstract void Update(TEntity entity);
 
 
         #region IEntityRepository Events
@@ -95,9 +57,7 @@ namespace Test.J3DI.Infrastructure.RepositoryFx
         public virtual event UpdatingEntityEventHandler<TEntity, TEntityId> UpdatingEntity;
         public virtual event UpdatedEntityEventHandler<TEntity, TEntityId> UpdatedEntity;
 
-        #endregion IEntityRepository Events
-
-        
+        #endregion IEntityRepository Events        
         #endregion IEntityRepository impl
 
         protected virtual CancelEventArgs OnAddingEntity(TEntity entity)
@@ -173,11 +133,6 @@ namespace Test.J3DI.Infrastructure.RepositoryFx
                 this.UpdatedEntity(entity);
             }
         }
-
-
-
-        // An in-memory repository
-        private Dictionary<TEntityId, TEntity> _repository = new Dictionary<TEntityId, TEntity>();
 
     }
 

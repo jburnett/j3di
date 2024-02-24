@@ -1,16 +1,13 @@
 using FluentAssertions;
-using J3DI.Domain;
-using J3DI.Infrastructure.EntityFactoryFx;
-using J3DI.Infrastructure.RepositoryFx;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Test.J3DI.Common;
-using Test.J3DI.Domain;
-using Test.J3DI.Infrastructure.EntityFactoryFx;
 using Xunit;
 
 
 namespace Test.J3DI.Infrastructure.RepositoryFx {
 
+	[ExcludeFromCodeCoverage]
     public class EntityByString1RepositoryTests {
 
 

@@ -2,7 +2,7 @@ using J3DI.Domain;
 using J3DI.Infrastructure.EntityFactoryFx;
 using System;
 using System.Collections.Generic;
-using Test.J3DI.Common;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace Test.J3DI.Infrastructure.EntityFactoryFx {
@@ -16,6 +16,7 @@ namespace Test.J3DI.Infrastructure.EntityFactoryFx {
     /// EntityFactoryManager; disabling it is valuable for building the entity directly
     /// (without requiring an actual IDataReader impl)
     /// </remarks>
+    [ExcludeFromCodeCoverage]
     public abstract class EntityFactoryBaseForTesting<TEntity, TEntityId> : IEntityFactory<TEntity, TEntityId>
         where TEntity : EntityBase<TEntityId>
     {

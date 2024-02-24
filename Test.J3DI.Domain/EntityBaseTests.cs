@@ -2,17 +2,15 @@
 using FluentAssertions;
 using J3DI.Domain;
 using System;
-using System.Linq;
-using System.Collections.Generic;
 using Test.J3DI.Common;
 using Xunit;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace Test.J3DI.Domain
 {
-    // TODO: include when doing code coverage
-    // [ExcludeFromCodeCoverage]
 
+	[ExcludeFromCodeCoverage]
     public class EntityBaseTests
     {
 

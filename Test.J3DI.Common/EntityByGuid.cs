@@ -1,11 +1,11 @@
 using J3DI.Domain;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace Test.J3DI.Common
 {
-    // TODO:
-    // [ExcludeFromCodeCoverage]
+    [ExcludeFromCodeCoverage]
 	public class EntityByGuid1 : EntityBase<Guid>
     {
 
@@ -20,6 +20,7 @@ namespace Test.J3DI.Common
 	}
 
 
+    [ExcludeFromCodeCoverage]
 	public class EntityByGuid2 : EntityBase<Guid>
     {
 
@@ -37,6 +38,7 @@ namespace Test.J3DI.Common
         NOTE: This class is only for test purposes. Don't use entities which
         allow nullable base types for real code.
     */
+    [ExcludeFromCodeCoverage]
 	public class EntityByNullableGuid : EntityBase<Guid?>
     {
 

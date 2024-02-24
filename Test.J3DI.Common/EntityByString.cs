@@ -1,14 +1,14 @@
 ﻿using J3DI.Domain;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace Test.J3DI.Common
 {
-    // TODO:
-    // [ExcludeFromCodeCoverage]
 
 	// EntityByString1 and EntityByString2 are distinct entity classes
 	//	and should never be equal
+	[ExcludeFromCodeCoverage]
 	public class EntityByString1 : EntityBase<string>
     {
 
@@ -22,6 +22,7 @@ namespace Test.J3DI.Common
 	}
 
 
+	[ExcludeFromCodeCoverage]
 	public class EntityByString2 : EntityBase<string>
     {
 

@@ -1,14 +1,13 @@
 using J3DI.Domain;
-using J3DI.Infrastructure.EntityFactoryFx;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Test.J3DI.Common;
-using Test.J3DI.Domain;
-using Test.J3DI.Infrastructure.EntityFactoryFx;
 using Xunit;
 
 
 namespace Test.J3DI.Infrastructure.EntityFactoryFx {
 
+	[ExcludeFromCodeCoverage]
     public class EntityFactoryTests {
 
         [Fact]

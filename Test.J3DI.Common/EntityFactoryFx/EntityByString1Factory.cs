@@ -3,11 +3,13 @@ using J3DI.Infrastructure.EntityFactoryFx;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using Test.J3DI.Common;
 
 
 namespace Test.J3DI.Infrastructure.EntityFactoryFx {
 
+    [ExcludeFromCodeCoverage]
     public class EntityByString1Factory : EntityFactoryBaseForTesting<EntityByString1, string>
     {
         #region IEntityFactory impl
