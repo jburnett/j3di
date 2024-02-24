@@ -1,7 +1,6 @@
 # J3DI
 A Domain-Driven Design framework for .NET Core.
 
-Visit https://github.com/jburnett/J3DI/wiki for project goals.
+[![Build Status](https://github.com/jburnett/j3di/blob/dev/.github/workflows/dotnet-core.yml/badge.svg)]  
+[![Coverage Status](https://coveralls.io/repos/github/jburnett/j3di/badge.svg?branch=master)](https://coveralls.io/github/jburnett/j3di?branch=master)
 
-11/20/2019: Upgraded to .NET Core 3.0 (netstandard2.1); dropped support for .NET Framework
-9/25/2016: Verified J3DI v0.1.0 tests pass on Windows and Ubuntu (14.04 & 16.04)
