@@ -1,4 +1,4 @@
-﻿using AMT.LinqExtensions;
+﻿using AMT.Extensions.Linq;
 using FluentAssertions;
 using J3DI.Domain;
 using System;
