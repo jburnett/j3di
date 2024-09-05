@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AMT.LINQExtensions" Version="*" />
+    <PackageReference Include="AMT.Extensions.Linq" Version="*" />
   </ItemGroup>
 
 </Project>

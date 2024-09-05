@@ -2,21 +2,15 @@
 
     <!-- Company, copyright -->
     <PropertyGroup>
-        <Copyright>AltaModa Technologies 2016-2022</Copyright>
+        <Copyright>AltaModa Technologies 2016-2024</Copyright>
         <Company>AltaModa Technologies</Company>
         <Authors>@jburnett</Authors>
     </PropertyGroup>
 
 
-    <!-- Target frameworks  -->
-    <PropertyGroup>
-        <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
-    </PropertyGroup>
-
-
     <!-- Assembly version & attribute controls -->
     <PropertyGroup>
-        <VersionPrefix>4.2.0</VersionPrefix>
+        <VersionPrefix>4.3.0</VersionPrefix>
 
         <GenerateAssemblyConfigurationAttribute>true</GenerateAssemblyConfigurationAttribute>
         <GenerateAssemblyCompanyAttribute>true</GenerateAssemblyCompanyAttribute>

@@ -7,11 +7,6 @@ test: build
 	dotnet test --no-build ./Test.J3DI.Infrastructure.RepositoryFx
 
 
-cover_OLD: build
-	dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=lcov ./Test.J3DI.Domain/Test.J3DI.Domain.csproj
-	dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=lcov ./Test.J3DI.Infrastructure.EntityfactoryFx/Test.J3DI.Infrastructure.EntityfactoryFx.csproj
-	dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=lcov ./Test.J3DI.Infrastructure.RepositoryFx/Test.J3DI.Infrastructure.RepositoryFx.csproj
-
 ## based on https://github.com/coverlet-coverage/coverlet/issues/262#issuecomment-569572522:
 ##	MergeWith only works with json (coverlet's native format). On the last test, output cobertura fmt
 ##	Tests need to be run separately rather than via sln file
@@ -38,20 +33,19 @@ cover: build
 		"/p:MergeWith=../TestResults/coverage.net8.0.json" \
 		"/p:CoverletOutputFormat=\"json,cobertura\"" 
 
-cover-report:
-	# reportgenerator \
-	# 	-targetdir:coveragereport/net6.0 \
-	# 	"-reports:./TestResults/coverage.net6.0.json"
 
+cover-report:
 	reportgenerator \
 		-targetdir:coveragereport/net8.0 \
 		"-reports:./TestResults/coverage.net8.0.cobertura.xml"
+
 
 coveralls-report:
 	coveralls report --format=cobertura TestResults/coverage.net8.0.cobertura.xml --repo-token=XK3p5o0AoS4H838oiS9bvVwz4ibcLIkvp
 	# coveralls report --format=lcov Test.J3DI.Domain/coverage.net8.0.info --repo-token=XK3p5o0AoS4H838oiS9bvVwz4ibcLIkvp
 	# coveralls report --format=lcov Test.J3DI.Infrastructure.RepositoryFx/coverage.net8.0.info --repo-token=XK3p5o0AoS4H838oiS9bvVwz4ibcLIkvp
 	# coveralls report --format=lcov Test.J3DI.Infrastructure.EntityFactoryFx/coverage.net8.0.info --repo-token=XK3p5o0AoS4H838oiS9bvVwz4ibcLIkvp
+
 
 build: 
 	dotnet build
@@ -72,5 +66,5 @@ clean-all: clean
 	rm -fr TestResults/*
 	# Last b/c sometimes fails
 	@echo "### Remove bin and obj dirs"
-	find . -type d -name "bin" -exec rm -fr "{}" \;
-	find . -type d -name "obj" -exec rm -fr {} \;
+	find . -type d -name "bin" -prune -exec rm -fr "{}" \;
+	find . -type d -name "obj" -prune -exec rm -fr {} \;
