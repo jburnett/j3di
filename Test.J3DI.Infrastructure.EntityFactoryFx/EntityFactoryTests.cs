@@ -15,7 +15,17 @@ namespace Test.J3DI.Infrastructure.EntityFactoryFx {
         {
             var e1Factory = new EntityByString1Factory();
             e1Factory.ThrowExceptionOnNullDataReader = false;
+
+            Assert.Equal(
+                typeof(EntityByString1),
+                e1Factory.EntityType()
+            );
             
+            Assert.Equal(
+                typeof(EntityByString1),
+                (new EntityByString1Factory().EntityType())
+            );
+
             EntityBase<string> e1 = e1Factory.BuildEntity(null);
             Assert.Equal( "EntityByString1", e1.Id.Split('_')[0] );
         }
