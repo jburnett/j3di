@@ -2,7 +2,7 @@
 
     <!-- Company, copyright -->
     <PropertyGroup>
-        <Copyright>AltaModa Technologies 2016-2024</Copyright>
+        <Copyright>AltaModa Technologies 2016-2025</Copyright>
         <Company>AltaModa Technologies</Company>
         <Authors>@jburnett</Authors>
     </PropertyGroup>
@@ -10,7 +10,7 @@
 
     <!-- Assembly version & attribute controls -->
     <PropertyGroup>
-        <VersionPrefix>4.3.0</VersionPrefix>
+        <VersionPrefix>4.4.0</VersionPrefix>
 
         <GenerateAssemblyConfigurationAttribute>true</GenerateAssemblyConfigurationAttribute>
         <GenerateAssemblyCompanyAttribute>true</GenerateAssemblyCompanyAttribute>
