@@ -6,7 +6,15 @@
       "version": "4.0.1",
       "commands": [
         "csmacnz.Coveralls"
-      ]
+      ],
+      "rollForward": false
+    },
+    "dotnet-outdated-tool": {
+      "version": "4.6.7",
+      "commands": [
+        "dotnet-outdated"
+      ],
+      "rollForward": false
     }
   }
 }
