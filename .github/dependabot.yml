@@ -3,4 +3,5 @@ updates:
   - package-ecosystem: "nuget"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+      day: "wednesday"  # b/c Patch Tuesday
